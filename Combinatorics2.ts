@@ -1,4 +1,4 @@
-class Combinatorics {
+class Combinations {
     /*
 Refactor the selected code into a class 'Combinatorics'. The functions should be static.
     */
@@ -12,9 +12,9 @@ Refactor the selected code into a class 'Combinatorics'. The functions should be
      * @example Combinatorics.fact(1) // returns 1
      * @example Combinatorics.fact(10) // returns 3628800
      */
-    static fact(n: number): number {
+    static factorial(num: number): number {
       let result = 1;
-      for (let i = 1; i <= n; i++) {
+      for (let i = 1; i <= num; i++) {
         result *= i;
       }
       return result;
@@ -29,7 +29,7 @@ Refactor the selected code into a class 'Combinatorics'. The functions should be
      * @example Combinatorics.permutation(5, 5) // returns 120
      * @example Combinatorics.permutation(5, 0) // returns 1
      */
-    static permutation(n: number, r: number): number {
+    static perm(n: number, r: number): number {
       return this.fact(n) / this.fact(n - r);
     }
   }
